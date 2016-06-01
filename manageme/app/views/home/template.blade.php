@@ -1,12 +1,13 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="es">
 	<head>
 	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 	<title>{{$title}} | {{Settings::get('page.title')}}</title>
 
 	<meta name="author" content="@dannegm">
-	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
 
 	@section('metas')
 	@show
@@ -38,26 +39,54 @@
 
 	<!-- Stylesheets -->
 
-	<link rel="stylesheet" href="{{URL::asset('/home/assets/css/main.css')}}" />
-	<link rel="stylesheet" href="{{URL::asset('/home/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+	<link rel="stylesheet/less" href="{{URL::asset('/home/less/default.less')}}">
+
+	<!-- Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,100,100italic,200,200italic">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+
 	@section('styles')
 	@show
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
-		<link rel="stylesheet" href="{{URL::asset('/home/assets/css/ie8.css')}}" />
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
 </head>
 <body id="top">
 
+	<!-- Menu -->
+	<nav id="menu" class="navbar navbar-default navbar-fixed-top transluced">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-menu" aria-expanded="false">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+					<img class="white" src="{{URL::asset('/home/img/dnn-logo-black.png')}}" />
+					<img class="transluced" src="{{URL::asset('/home/img/dnn-logo-white.png')}}" />
+				</a>
+			</div>
 
-	<header id="header">
-		{{Fragment::get('general.header')->html}}
-	</header>
+			<div class="collapse navbar-collapse pull-right" id="primary-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#aboutme">Sobre mi</a></li>
+					<li><a href="#services">Servicios</a></li>
+					<li><a href="#proyects">Proyectos</a></li>
+					<li><a href="#blog">Blog</a></li>
+					<li><a href="#contact">Contacto</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
 
 	<div id="main">
 
@@ -66,26 +95,12 @@
 
 	</div>
 
-	<footer id="footer">
-		<ul class="icons">
-			<li><a href="{{Settings::get('social.twitter')}}" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-			<li><a href="{{Settings::get('social.instagram')}}" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-			<li><a href="{{Settings::get('social.github')}}" class="icon fa-github"><span class="label">Github</span></a></li>
-			<li><a href="{{Settings::get('social.linkedin')}}" class="icon fa-linkedin"><span class="label">Linked In</span></a></li>
-		</ul>
-		<ul class="copyright">
-			<li>By Dannegm</li>
-			<li>&copy; 2015</li>
-		</ul>
-	</footer>
-
 
 	<!-- Scripts -->
-	<script src="{{URL::asset('/home/assets/js/jquery.min.js')}}"></script>
-	<script src="{{URL::asset('/home/assets/js/jquery.poptrox.min.js')}}"></script>
-	<script src="{{URL::asset('/home/assets/js/skel.min.js')}}"></script>
-	<script src="{{URL::asset('/home/assets/js/util.js')}}"></script>
-	<script src="{{URL::asset('/home/assets/js/main.js')}}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="{{URL::asset('/home/js/main.js')}}"></script>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
