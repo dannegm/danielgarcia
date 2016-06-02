@@ -162,14 +162,6 @@
 	}
 }
 
-.card {
-	text-align: center;
-	margin-top: 2em;
-	h1 {
-		font-size: 1.4em;
-		font-family: @f_raleway;
-	}
-}
 
 .parallax {
 	background-color: #222;
@@ -191,6 +183,55 @@
 				content: ' ';
 				display: block;
 				margin: 20px 0 20px 0;
+				height: 4px;
+				width: 40px;
+				background: @c_blue_200;
+			}
+		}
+
+		p {
+			font-size: 16px;
+			font-weight: 400;
+			font-family: @f_raleway;
+			margin-bottom: 50px;
+			em {
+				font-weight: 700;
+				font-style: normal;
+				color: #29D3FE;
+			}
+			a {
+				color: #29D3FE;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.card {
+	background-color: #222;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #fff;
+
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 64px 0;
+
+	.overlay {
+		padding: 60px 0;
+		background: rgba(0,0,0,.5);
+	}
+	.defaults {
+		text-align: center;
+		padding: 20px 30px;
+		h1 {
+			font-size: 22px !important;
+			line-height: 30px !important;
+			&:after {
+				content: ' ';
+				display: block;
+				margin: 20px auto;
 				height: 4px;
 				width: 40px;
 				background: @c_blue_200;
@@ -246,6 +287,36 @@
 					font-weight: 700;
 				}
 			}
+		}
+	}
+}
+
+.footer {
+	background: #333333;
+	color: #fff;
+	padding: 50px 0;
+
+	h1 {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	p, a {
+		font-size: 12px;
+		line-height: 20px;
+		color: #898989;
+	}
+	img {
+		width: 100%;
+	}
+
+	&.dark {
+		padding: 20px 0;
+		background: #282828;
+		h6 {
+			color: #A9A9A9;
+			font-size: 14px;
+			line-height: 16px;
+			font-weight: 400;
 		}
 	}
 }
@@ -349,9 +420,9 @@ body {
 
 	#scrolldown {
 		position: absolute;
-		width: 100px;
+		width: 40px;
 		left: 50%;
-		margin-left: -50px;
+		margin-left: -20px;
 		bottom: 50px;
 		z-index: 10;
 	}
@@ -447,3 +518,32 @@ body {
 
 //! ===========================================
 
+@media (max-width: 480px) {
+	.wrapper {
+		width: 80%;
+		margin: auto;
+
+		figure {
+			width: 180px !important;
+			height: 180px !important;
+		}
+		h1 {
+			img {
+				height: 42px !important;
+			}
+		}
+		h2 {
+			font-size: 1em !important;
+		}
+	}
+	.post {
+		p {
+			font-size: 14px;
+		}
+	}
+	.calltoaction {
+		p {
+			font-size: 22px;
+		}
+	}
+}

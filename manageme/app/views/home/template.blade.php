@@ -76,12 +76,12 @@
 
 			<div class="collapse navbar-collapse pull-right" id="primary-menu">
 				<ul class="nav navbar-nav">
-					<li><a href="#">Inicio</a></li>
-					<li><a href="#aboutme">Sobre mi</a></li>
-					<li><a href="#services">Servicios</a></li>
-					<li><a href="#proyects">Proyectos</a></li>
-					<li><a href="#blog">Blog</a></li>
-					<li><a href="#contact">Contacto</a></li>
+					<li><a class="scrollTo" href="#cover">Inicio</a></li>
+					<li><a class="scrollTo" href="#aboutme">Sobre mi</a></li>
+					<li><a class="scrollTo" href="#services">Servicios</a></li>
+					<li><a class="scrollTo" href="#proyects">Proyectos</a></li>
+					<li><a class="scrollTo" href="#blog">Blog</a></li>
+					<li><a class="scrollTo" href="#contact">Contacto</a></li>
 				</ul>
 			</div>
 		</div>
@@ -94,6 +94,24 @@
 		@show
 
 	</div>
+
+	<!-- Footer -->
+	<footer>	
+		<div class="footer">
+			<div class="container">
+				
+			</div>
+		</div>
+		<div class="footer dark">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<h6>All right reserved.</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 
 	<!-- Scripts -->

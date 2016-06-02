@@ -66,6 +66,13 @@ var Appear = {
 
 var Page = {
 	events: function () {
+		$(document).on('click', '.scrollTo', function () {
+			var hash = $(this).attr('href');
+			var ttop = $(hash).position().top - $('#menu').height();
+	        $('html, body').animate({
+	            scrollTop: ttop
+	        }, 300);
+		});
 		$(document).scroll(function () {
 			if ( $('body').scrollTop() > 200) {
 				$('#menu').removeClass('transluced');
