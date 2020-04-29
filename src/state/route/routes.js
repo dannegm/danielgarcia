@@ -1,5 +1,5 @@
 import React from 'react'
-import PushLocation from './components/PushLocation'
+import External from './components/External'
 
 import Home from '@/pages/Home'
 
@@ -13,9 +13,9 @@ const routes = [
         exact,
     },
     {
-        name: 'projects.nyungerland',
+        name: 'external.nyungerland',
         path: '/nyungerland',
-        component: () => <PushLocation to={'https://nyungerland.net/'} />,
+        component: () => <External url={'https://nyungerland.net/'} />,
         exact,
     }
 ]

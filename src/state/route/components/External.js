@@ -1,7 +1,7 @@
 import useRedirect from '@/state/hooks/useRedirect'
 
-const PushLocation = ({ to }) => {
-    useRedirect(to)
+const External = ({ url }) => {
+    useRedirect(url)
     return null
 }
 
