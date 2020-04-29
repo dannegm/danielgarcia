@@ -5,4 +5,4 @@ const External = ({ url }) => {
     return null
 }
 
-export default PushLocation
+export default External
