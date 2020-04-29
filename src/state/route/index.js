@@ -12,12 +12,7 @@ const RouteHandler = () => (
         <Switch>
             {
                 routes.map(route => (
-                    <Route
-                        key={route.name}
-                        path={route.path}
-                        component={route.component}
-                        exact
-                    />
+                    <Route key={route.name} {...route} />
                 ))
             }
         </Switch>
