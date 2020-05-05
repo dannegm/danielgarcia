@@ -1,5 +1,7 @@
 import React from 'react'
-import './styles.scss'
+import {home} from './Home.module.scss'
+
+console.log(home)
 
 import useDocumentTitle from '@/state/hooks/useDocumentTitle'
 
@@ -7,7 +9,7 @@ const Home = () => {
     useDocumentTitle('Home')
 
     return (
-        <div className={'home'}>
+        <div className={home}>
             <h1>Hello!</h1>
             <h2>I'm Daniel García</h2>
         </div>

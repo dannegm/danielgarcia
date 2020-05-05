@@ -1,7 +1,8 @@
 const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-require('dotenv').config()
+const isDevelopment = process.env.NODE_ENV === 'development'
 
 module.exports = {
     module: {
@@ -11,6 +12,9 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
+                    options: {
+                        sourceMap: isDevelopment,
+                    }
                 },
             },
             {
@@ -22,21 +26,44 @@ module.exports = {
                 ]
             },
             {
-                test: /\.s[ac]ss$/i,
-                use: [
-                    'style-loader',
+                test: /\.module\.s[ac]ss$/,
+                loader: [
+                    isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            sourceMap: isDevelopment,
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: isDevelopment,
+                            sassOptions: {
+                                outputStyle: 'compressed',
+                            },
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.s[ac]ss$/,
+                exclude: /\.module.(s[ac]ss)$/,
+                loader: [
+                    isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
                     'css-loader',
                     {
                         loader: 'sass-loader',
                         options: {
-                            sourceMap: true,
+                            sourceMap: isDevelopment,
                             sassOptions: {
                                 outputStyle: 'compressed',
                             },
-                        },
-                    },
-                ],
-            },
+                        }
+                    }
+                ]
+            }
         ],
     },
     resolve: {
@@ -52,6 +79,10 @@ module.exports = {
         new HtmlWebPackPlugin ({
             template: './public/index.html',
             filename: './index.html',
+        }),
+        new MiniCssExtractPlugin({
+            filename: isDevelopment ? '[name].css' : '[name].[hash].css',
+            chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css'
         }),
     ],
     devServer: {
