@@ -1,23 +1,7 @@
-import React from 'react'
-import External from './components/External'
+import { Routes } from '@/modules';
 
-import Home from '@/pages/Home'
+const routes = [...Routes];
 
-const exact = true
+console.log(routes);
 
-const routes = [
-    {
-        name: 'home',
-        path: '/',
-        component: Home,
-        exact,
-    },
-    {
-        name: 'external.nyungerland',
-        path: '/nyungerland',
-        component: () => <External url={'https://nyungerland.net/'} />,
-        exact,
-    }
-]
-
-export default routes
+export default routes;

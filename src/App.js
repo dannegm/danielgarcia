@@ -1,13 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-import RouteHandler from './state/route'
+import RouteHandler from './state/route/RouteHandler';
+import GlobalStyle from './shared/styles/GlobalStyle';
 
-import '@/assets/scss/main.scss'
-
-const App = () => (
-    <div className={'App'}>
-        <RouteHandler />
-    </div>
-)
-
-export default App
+const App = () => {
+    return (
+        <>
+            <GlobalStyle />
+            <RouteHandler />
+        </>
+    );
+};
+export default App;
