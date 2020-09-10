@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Page } from './Home.styled';
-
 import useDocumentTitle from '@/shared/hooks/useDocumentTitle';
+
+import { Page } from './Home.styled';
 
 const Home = () => {
     useDocumentTitle('Home');
@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <Page>
             <h1>Hello!</h1>
-            <h2>I'm Daniel García</h2>
+            <h2>I&apos;m Daniel Garc&itilde;a</h2>
         </Page>
     );
 };
