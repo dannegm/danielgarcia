@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        font-family: Helvetica, Arial, sans-serif;
+        font-family: 'Raleway', Helvetica, Arial, sans-serif;
         color: #050038;
     }
 
