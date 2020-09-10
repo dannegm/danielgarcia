@@ -66,10 +66,10 @@ const onFrameUpdate = ({ stars }) => {
 
 const Galaxy = () => {
     const $canvas = useRef(null);
-    const [width, height] = useWindowSize();
 
     const renderer = Renderer();
-    renderer.setSize(width, height);
+
+    const [width, height] = useWindowSize(([w, h]) => renderer.setSize(w, h));
 
     const scene = Scene();
     const camera = Camera(width, height);

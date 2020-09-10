@@ -7,7 +7,7 @@ import Galaxy from '@/shared/components/Galaxy';
 import { Page, Background, Overlay } from './Home.styled';
 
 const Home = () => {
-    useDocumentTitle('Home');
+    useDocumentTitle('Hello!, I’m Daniel García');
 
     return (
         <Page>
@@ -16,7 +16,7 @@ const Home = () => {
                     src="https://graph.facebook.com/2800131720206407/picture?type=large"
                     alt="Avatar of Daniel García"
                 />
-                <h1>Hello!, I&apos;m Daniel García.</h1>
+                <h1>Hello!, I’m Daniel García.</h1>
             </Overlay>
             <Background>
                 <Galaxy />

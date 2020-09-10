@@ -1,5 +1,10 @@
 import { Routes } from '@/modules';
 
-const routes = [...Routes];
+const routes = [
+    // breakline
+    ...Routes,
+];
+
+console.log(routes);
 
 export default routes;
