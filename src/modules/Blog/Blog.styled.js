@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { rgba } from 'polished';
 
-import { Menu } from 'semantic-ui-react';
+import { Container, Menu } from 'semantic-ui-react';
 
 export const Page = styled.div`
     display: block;
@@ -10,17 +10,35 @@ export const Page = styled.div`
 `;
 
 export const Background = styled.div`
+    position: absolute;
+    z-index: -1;
     width: 100%;
-    height: 100vh;
+    height: 7.5rem;
     overflow: hidden;
 `;
 
 export const Overlay = styled.div`
-    position: absolute;
-    z-index: 10;
     top: 0;
     width: 100%;
     min-height: 100vh;
+`;
+
+export const Content = styled(Container)`
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+`;
+
+export const Footer = styled.div`
+    width: 100%;
+    height: 12rem;
+`;
+
+export const Avatar = styled.img`
+    border-radius: 0.5rem;
+    width: 3.5rem;
+    position: absolute;
+    margin-left: -2.5rem;
+    cursor: pointer;
 `;
 
 export const MenuWrapper = styled.div`
@@ -36,26 +54,11 @@ export const TransparentMenu = styled(Menu)`
                 background: rgba(255 255 255 / 2%);
                 color: rgba(255 255 255 / 90%);
             }
+
+            &.active {
+                background: rgba(255 255 255 / 5%);
+                color: rgba(255 255 255 / 90%);
+            }
         }
-    }
-`;
-
-export const Hero = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    min-height: 90vh;
-
-    h1 {
-        font-size: 2rem;
-        margin: 0;
-    }
-    img {
-        width: 12rem;
-        margin: 3rem;
-        border-radius: 50%;
-        border: 3px solid ${rgba('#fff', 0.1)};
     }
 `;
