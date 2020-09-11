@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { rgba } from 'polished';
 
 import { Container, Menu } from 'semantic-ui-react';
 

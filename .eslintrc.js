@@ -29,6 +29,7 @@ module.exports = {
         'react/jsx-curly-newline': 'off',
         'react/display-name': 'off',
         'react/jsx-props-no-spreading': 'off',
+        'react/jsx-wrap-multilines': 'off',
         'react/destructuring-assignment': 'off',
         'react/jsx-filename-extension': [1, { extensions: ['.js'] }],
     },
