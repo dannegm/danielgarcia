@@ -7,7 +7,7 @@ const routes = [
     {
         name: 'external.nyungerland',
         path: '/nyungerland',
-        component: () => <Redirect to="https://nyungerland.net/" />,
+        component: () => <Redirect to='https://nyungerland.net/' />,
         exact,
     },
 ];

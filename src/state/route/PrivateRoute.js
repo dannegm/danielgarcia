@@ -3,6 +3,7 @@ import { Route, Redirect } from 'react-router-dom';
 
 import useAuth from '@/shared/hooks/useAuth';
 
+// eslint-disable-next-line react/prop-types
 const PrivateRoute = ({ component: Component, ...rest }) => {
     const { isLoading, isAuthorized } = useAuth();
 
@@ -15,7 +16,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
             {...rest}
             render={(props) =>
                 !isAuthorized ? (
-                    <Redirect to="/secret/login" />
+                    <Redirect to='/secret/login' />
                 ) : (
                     <Component {...props} />
                 )

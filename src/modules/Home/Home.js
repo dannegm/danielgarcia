@@ -13,8 +13,8 @@ const Home = () => {
         <Page>
             <Overlay>
                 <img
-                    src="https://graph.facebook.com/2800131720206407/picture?type=large"
-                    alt="Avatar of Daniel García"
+                    src='https://graph.facebook.com/2800131720206407/picture?type=large'
+                    alt='Avatar of Daniel García'
                 />
                 <h1>Hello!, I’m Daniel García.</h1>
             </Overlay>

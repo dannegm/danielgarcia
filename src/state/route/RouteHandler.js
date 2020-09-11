@@ -23,7 +23,7 @@ const RouteHandler = () => (
                         <PrivateRoute key={route.name} {...route} />
                     )
                 )}
-                <Route component={() => <Redirect to="/404" />} />
+                <Route component={() => <Redirect to='/404' />} />
             </Switch>
         </Suspense>
     </Router>

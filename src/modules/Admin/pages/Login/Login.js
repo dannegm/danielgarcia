@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Redirect } from 'react-router-dom';
 
@@ -23,7 +23,7 @@ const LoginScreen = ({ requestLogin }) => {
     return (
         <LoginWrapper>
             <LoginAvatarIcon>
-                <Icon name="user secret" size="big" />
+                <Icon name='user secret' size='big' />
             </LoginAvatarIcon>
             <LoginTitle>Dashboard</LoginTitle>
             <LoginDescription>
@@ -32,10 +32,10 @@ const LoginScreen = ({ requestLogin }) => {
             </LoginDescription>
 
             <LoginButtonAction
-                color="google plus"
+                color='google plus'
                 onClick={() => requestLogin()}
             >
-                <Icon name="google" /> Inicia con Google
+                <Icon name='google' /> Inicia con Google
             </LoginButtonAction>
         </LoginWrapper>
     );
@@ -45,7 +45,7 @@ const UnauthorizedScreen = ({ user, requestLogin, requestLogout }) => {
     return (
         <LoginWrapper>
             <LoginAvatarImg>
-                <img src={user.photoURL} />
+                <img src={user.photoURL} alt='' />
             </LoginAvatarImg>
             <LoginTitle>Bienvenido</LoginTitle>
             <LoginDescription>
@@ -59,10 +59,10 @@ const UnauthorizedScreen = ({ user, requestLogin, requestLogout }) => {
             <LoginToken>{user.uid}</LoginToken>
 
             <LoginButtonAction
-                color="google plus"
+                color='google plus'
                 onClick={() => requestLogin()}
             >
-                <Icon name="google" /> Cambiar de cuenta
+                <Icon name='google' /> Cambiar de cuenta
             </LoginButtonAction>
 
             <LoginButtonLink onClick={() => requestLogout()} basic>
@@ -95,7 +95,7 @@ const Login = () => {
         );
     }
 
-    return <Redirect to="/secret/dasboard" />;
+    return <Redirect to='/secret/dasboard' />;
 };
 
 export default Login;

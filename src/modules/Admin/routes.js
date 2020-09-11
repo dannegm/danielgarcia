@@ -15,7 +15,7 @@ const routes = [
     {
         name: 'admin.root',
         path: '/secret',
-        component: () => <Redirect to="/secret/login" />,
+        component: () => <Redirect to='/secret/login' />,
         exact,
     },
     {

@@ -36,7 +36,7 @@ const Ambient = ({ scene }) => {
 
 const Stars = ({ scene }) => {
     const stars = new THREE.Object3D();
-    for (let i = 0; i < 800; i++) {
+    for (let i = 0; i < 800; i += 1) {
         const geometry = new THREE.IcosahedronGeometry(Math.random() * 2, 0);
         const material = new THREE.MeshToonMaterial({ color: 0xcccccc });
         const mesh = new THREE.Mesh(geometry, material);
@@ -59,7 +59,9 @@ const Stars = ({ scene }) => {
 
 const onFrameUpdate = ({ stars }) => {
     if (stars.rotation) {
+        // eslint-disable-next-line no-param-reassign
         stars.rotation.y += 0.0009;
+        // eslint-disable-next-line no-param-reassign
         stars.rotation.z -= 0.0003;
     }
 };
@@ -90,7 +92,7 @@ const Galaxy = () => {
 
     return (
         <Wrapper>
-            <Canvas ref={$canvas}></Canvas>
+            <Canvas ref={$canvas} />
         </Wrapper>
     );
 };
