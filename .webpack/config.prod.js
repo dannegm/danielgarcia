@@ -34,14 +34,29 @@ module.exports = {
                 ],
             },
             {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader', 'resolve-url-loader'],
+            },
+            {
                 test: /\.(jpe?g|gif|png|svg)$/i,
-                include: [path.resolve(__dirname, './../src/assets/images')],
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
                             outputPath: 'images/',
+                        },
+                    },
+                ],
+            },
+            {
+                test: /.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'fonts/',
                         },
                     },
                 ],
@@ -88,7 +103,7 @@ module.exports = {
     ],
 
     resolve: {
-        extensions: ['.js'],
+        extensions: ['.js', '.css'],
         alias: {
             '@': path.join(__dirname, './../src/'),
         },

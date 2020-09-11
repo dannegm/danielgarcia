@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
+import 'semantic-ui-css/semantic.min.css';
 
 const GlobalStyle = createGlobalStyle`
     ${normalize}

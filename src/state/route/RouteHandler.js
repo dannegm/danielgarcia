@@ -8,15 +8,21 @@ import {
 
 import { Loading } from './RouterHandler.styled';
 
+import PrivateRoute from './PrivateRoute';
+
 import routes from './routes';
 
 const RouteHandler = () => (
     <Router>
         <Suspense fallback={<Loading />}>
             <Switch>
-                {routes.map((route) => (
-                    <Route key={`root.${route.name}`} {...route} />
-                ))}
+                {routes.map((route) =>
+                    !route.auth ? (
+                        <Route key={route.name} {...route} />
+                    ) : (
+                        <PrivateRoute key={route.name} {...route} />
+                    )
+                )}
                 <Route component={() => <Redirect to="/404" />} />
             </Switch>
         </Suspense>

@@ -5,6 +5,4 @@ const routes = [
     ...Routes,
 ];
 
-console.log(routes);
-
 export default routes;
