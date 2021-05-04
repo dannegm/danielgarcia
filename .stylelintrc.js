@@ -11,5 +11,6 @@ module.exports = {
         'rule-empty-line-before': null,
         'selector-type-no-unknown': null,
         'declaration-empty-line-before': null,
+        'block-no-empty': null,
     },
 };
