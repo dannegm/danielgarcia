@@ -63,7 +63,7 @@ const Home = () => {
                         <SocialLinks>
                             <SocialLink color="#d1d5da" href="https://github.com/dannegm">Github</SocialLink>
                             <SocialLink color="#1da1f2" href="https://twitter.com/dannegm">Twitter</SocialLink>
-                            <SocialLink color="#0A66C2" href="https://www.linkedin.com/in/dannegm">Linked In</SocialLink>
+                            <SocialLink color="#0A66C2" href="https://www.linkedin.com/in/dannegm">LinkedIn</SocialLink>
                             <SocialLink color="#dd2a7b" href="https://www.instagram.com/dannegm">Instagram</SocialLink>
                         </SocialLinks>
                     </DescritionContainer>
