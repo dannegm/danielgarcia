@@ -16,21 +16,24 @@
         "prettier": "prettier \"**/*.{js,json}\" --check",
         "prettier:fix": "npm run prettier -- --write"
     },
+    "lint-staged": {
+        "*.{js, jsx, css, json}": [
+            "npm run prettier:fix",
+            "npm run lint",
+            "git add"
+        ]
+    },
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged"
         }
     },
-    "lint-staged": {
-        "*.+js": [
-            "npm run prettier:fix",
-            "npm run lint"
-        ]
-    },
     "dependencies": {
+        "@blueprintjs/core": "^3.44.2",
         "config": "^3.3.1",
         "dotenv": "^8.2.0",
         "firebase": "^7.18.0",
+        "nanoid": "^3.1.22",
         "polished": "^3.6.5",
         "prop-types": "^15.7.2",
         "react": "^16.13.1",

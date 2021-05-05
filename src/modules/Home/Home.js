@@ -1,4 +1,8 @@
+/* eslint-disable camelcase */
 import React from 'react';
+
+import avatare_covid19 from '@/assets/images/avatares/avatare-covid19.png';
+import avatare_vader from '@/assets/images/avatares/avatare-vader.png';
 
 import useDocumentTitle from '@/shared/hooks/useDocumentTitle';
 
@@ -22,13 +26,10 @@ import {
     SocialLink,
 } from './Home.styled';
 
-import avatare_covid19 from '@/assets/images/avatares/avatare-covid19.png';
-import avatare_vader from '@/assets/images/avatares/avatare-vader.png';
-
 const isBetweenDates = (start, end) => {
     const now = Date.now();
-    const startTime = (new Date(start)).getTime();
-    const endTime = (new Date(end)).getTime();
+    const startTime = new Date(start).getTime();
+    const endTime = new Date(end).getTime();
     return now > startTime && now < endTime;
 };
 
@@ -38,7 +39,7 @@ const getAvatar = () => {
     }
 
     return avatare_covid19;
-}
+};
 
 const Home = () => {
     useDocumentTitle('Hello!, I’m Daniel García');
@@ -51,20 +52,49 @@ const Home = () => {
             <Overlay>
                 <Hero>
                     <AvatarContainer>
-                        <Avatar src={getAvatar()} alt='Avatar of Daniel García' />
+                        <Avatar
+                            src={getAvatar()}
+                            alt='Avatar of Daniel García'
+                        />
                     </AvatarContainer>
                     <DescritionContainer>
                         <Hello>Hello!</Hello>
-                        <Name>I’m <b>Daniel García</b>,</Name>
+                        <Name>
+                            I’m <b>Daniel García</b>,
+                        </Name>
                         <Title>Software Specialist.</Title>
                         <Description>
-                            Currently may find me at <Link href="https://www.wizeline.com/">Wizeline</Link> coding something awesone.
+                            Currently may find me at{' '}
+                            <Link href='https://www.wizeline.com/'>
+                                Wizeline
+                            </Link>{' '}
+                            coding something awesone.
                         </Description>
                         <SocialLinks>
-                            <SocialLink color="#d1d5da" href="https://github.com/dannegm">Github</SocialLink>
-                            <SocialLink color="#1da1f2" href="https://twitter.com/dannegm">Twitter</SocialLink>
-                            <SocialLink color="#0A66C2" href="https://www.linkedin.com/in/dannegm">LinkedIn</SocialLink>
-                            <SocialLink color="#dd2a7b" href="https://www.instagram.com/dannegm">Instagram</SocialLink>
+                            <SocialLink
+                                color='#d1d5da'
+                                href='https://github.com/dannegm'
+                            >
+                                Github
+                            </SocialLink>
+                            <SocialLink
+                                color='#1da1f2'
+                                href='https://twitter.com/dannegm'
+                            >
+                                Twitter
+                            </SocialLink>
+                            <SocialLink
+                                color='#0A66C2'
+                                href='https://www.linkedin.com/in/dannegm'
+                            >
+                                LinkedIn
+                            </SocialLink>
+                            <SocialLink
+                                color='#dd2a7b'
+                                href='https://www.instagram.com/dannegm'
+                            >
+                                Instagram
+                            </SocialLink>
                         </SocialLinks>
                     </DescritionContainer>
                 </Hero>

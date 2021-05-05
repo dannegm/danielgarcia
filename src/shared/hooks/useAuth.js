@@ -1,15 +1,14 @@
 import { useState } from 'react';
-import { v4 as uuid } from 'uuid';
+import { nanoid } from 'nanoid';
 import { firebase, auth, db } from '@/shared/services/firebase';
 
 const GoogleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
 const INITIAL_USER = {
-    uid: uuid(),
+    uid: nanoid(),
     email: 'none@mail.com',
     displayName: 'UNKNOWN',
     photoURL: '#',
-    isAdmin: false,
 };
 
 const useAuth = () => {
@@ -32,6 +31,7 @@ const useAuth = () => {
             setUser(INITIAL_USER);
             setSession(false);
             setAuthorized(false);
+            setLoading(false);
         }
     });
 
@@ -40,9 +40,12 @@ const useAuth = () => {
     };
 
     const requestLogout = async () => {
+        setLoading(true);
         await auth.signOut();
+        setUser(INITIAL_USER);
         setSession(false);
         setAuthorized(false);
+        setLoading(false);
     };
 
     return {
