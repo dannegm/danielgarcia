@@ -135,6 +135,7 @@ export const Link = styled.a.attrs({ target: '_blank' })`
     position: relative;
     text-decoration: none !important;
 
+    &:hover,
     &:visited {
         color: ${({ color }) => color || '#f0575d'};
     }
@@ -163,6 +164,17 @@ export const Link = styled.a.attrs({ target: '_blank' })`
         margin: 0.15rem inherit;
         border-radius: 4px;
         max-height: 2rem;
+
+        &:hover,
+        &:visited {
+            color: ${({ color = '#f0575d' }) =>
+                color && isDark(hexToArray(color)) ? '#fff' : '#222'};
+        }
+
+        &::after {
+            content: '';
+            display: none;
+        }
     `)}
 `;
 
