@@ -135,6 +135,10 @@ export const Link = styled.a.attrs({ target: '_blank' })`
     position: relative;
     text-decoration: none !important;
 
+    &:visited {
+        color: ${({ color }) => color || '#f0575d'};
+    }
+
     &::after {
         content: ' ';
         display: block;
