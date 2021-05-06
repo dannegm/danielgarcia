@@ -84,7 +84,7 @@ const Home = () => {
                                 Twitter
                             </SocialLink>
                             <SocialLink
-                                color='#0A66C2'
+                                color='#0a66c2'
                                 href='https://www.linkedin.com/in/dannegm'
                             >
                                 LinkedIn

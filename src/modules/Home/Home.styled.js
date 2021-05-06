@@ -1,5 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { rgba } from 'polished';
+import { breakpoints } from '@/shared/styles/mediaQueries';
+import { isDark, hexToArray } from '@/shared/helpers/colors';
 
 export const Page = styled.div`
     display: block;
@@ -29,6 +31,13 @@ export const Hero = styled.div`
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+
+    ${breakpoints.mobile(css`
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 4rem 2rem;
+    `)}
 `;
 
 export const AvatarContainer = styled.div`
@@ -39,6 +48,18 @@ export const AvatarContainer = styled.div`
     padding-right: 2rem;
     margin-right: 2rem;
     border-right: 4px solid #fff;
+
+    ${breakpoints.desktop(css`
+        width: 200px;
+    `)}
+
+    ${breakpoints.mobile(css`
+        padding-right: 0;
+        margin-right: 0;
+        border-right: 0;
+        margin-bottom: 2rem;
+        width: 60%;
+    `)}
 `;
 
 export const Avatar = styled.img`
@@ -47,6 +68,11 @@ export const Avatar = styled.img`
     width: 100%;
     border-radius: 50%;
     border: 4px solid #fff;
+
+    ${breakpoints.mobile(css`
+        border-radius: 1rem;
+        border: 0;
+    `)}
 `;
 
 export const DescritionContainer = styled.div`
@@ -57,6 +83,10 @@ export const Hello = styled.div`
     color: #fff;
     font-size: 3rem;
     font-weight: 300;
+
+    ${breakpoints.desktop(css`
+        font-size: 1.5rem;
+    `)}
 `;
 
 export const Name = styled.div`
@@ -66,12 +96,24 @@ export const Name = styled.div`
     & > b {
         font-weight: 500;
     }
+
+    ${breakpoints.desktop(css`
+        font-size: 3rem;
+    `)}
+
+    ${breakpoints.mobile(css`
+        font-size: 2rem;
+    `)}
 `;
 
 export const Title = styled.div`
     color: #fff;
     font-size: 2rem;
     font-weight: 300;
+
+    ${breakpoints.desktop(css`
+        font-size: 1.25rem;
+    `)}
 `;
 
 export const Description = styled.div`
@@ -79,6 +121,11 @@ export const Description = styled.div`
     font-size: 1.5rem;
     margin-top: 2rem;
     font-weight: 300;
+
+    ${breakpoints.desktop(css`
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    `)}
 `;
 
 export const Link = styled.a.attrs({ target: '_blank' })`
@@ -103,6 +150,16 @@ export const Link = styled.a.attrs({ target: '_blank' })`
             width: 100%;
         }
     }
+
+    ${breakpoints.mobile(css`
+        background-color: ${({ color }) => color || '#f0575d'};
+        color: ${({ color = '#f0575d' }) =>
+            color && isDark(hexToArray(color)) ? '#fff' : '#222'};
+        padding: 0.25rem 0.5rem;
+        margin: 0.15rem inherit;
+        border-radius: 4px;
+        max-height: 2rem;
+    `)}
 `;
 
 export const SocialLinks = styled.div`
@@ -111,6 +168,15 @@ export const SocialLinks = styled.div`
     margin-top: 1rem;
     display: flex;
     flex-direction: row;
+
+    ${breakpoints.desktop(css`
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    `)}
+
+    ${breakpoints.mobile(css`
+        margin-top: 2rem;
+    `)}
 `;
 
 export const SocialLink = styled(Link)`
@@ -121,4 +187,13 @@ export const SocialLink = styled(Link)`
         margin-right: 2px;
         display: inline-block;
     }
+
+    ${breakpoints.mobile(css`
+        margin-right: 0.5rem;
+
+        &::before {
+            content: '';
+            display: none;
+        }
+    `)}
 `;
