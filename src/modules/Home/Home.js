@@ -3,6 +3,7 @@ import React from 'react';
 
 import avatare_covid19 from '@/assets/images/avatares/avatare-covid19.png';
 import avatare_vader from '@/assets/images/avatares/avatare-vader.png';
+import avatare_interestepan from '@/assets/images/avatares/avatare-interestepan.png';
 
 import useDocumentTitle from '@/shared/hooks/useDocumentTitle';
 
@@ -36,6 +37,10 @@ const isBetweenDates = (start, end) => {
 const getAvatar = () => {
     if (isBetweenDates('05/03/2021', '05/09/2021')) {
         return avatare_vader;
+    }
+
+    if (isBetweenDates('05/15/2021', '05/16/2021')) {
+        return avatare_interestepan;
     }
 
     return avatare_covid19;
