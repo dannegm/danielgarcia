@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import * as THREE from 'three';
 
 import useWindowSize from '@/shared/hooks/useWindowSize';
@@ -66,7 +67,7 @@ const onFrameUpdate = ({ stars }) => {
     }
 };
 
-const Galaxy = () => {
+const Galaxy = ({ backgroundColor }) => {
     const $canvas = useRef(null);
 
     const renderer = Renderer();
@@ -91,10 +92,18 @@ const Galaxy = () => {
     }, [$canvas]);
 
     return (
-        <Wrapper>
+        <Wrapper backgroundColor={backgroundColor}>
             <Canvas ref={$canvas} />
         </Wrapper>
     );
+};
+
+Galaxy.propTypes = {
+    backgroundColor: PropTypes.string,
+};
+
+Galaxy.defaultProps = {
+    backgroundColor: '#1e2c31',
 };
 
 export default Galaxy;

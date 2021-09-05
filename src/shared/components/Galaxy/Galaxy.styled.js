@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: #1e2c31;
+    background-color: ${({ backgroundColor }) => backgroundColor};
     overflow: hidden;
 `;
 

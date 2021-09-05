@@ -22,7 +22,9 @@ export const Overlay = styled.div`
     width: 100%;
     min-height: 100vh;
     backdrop-filter: blur(2px);
-    background-color: ${rgba('#022D4B', 0.5)};
+    /* stylelint-disable-next-line declaration-colon-newline-after */
+    background-color: ${({ backgroundColor = '#022D4B' }) =>
+        rgba(backgroundColor, 0.5)};
 `;
 
 export const Hero = styled.div`
