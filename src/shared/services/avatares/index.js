@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+import React from 'react';
 import moment from 'moment';
 
 import avatare_default from '@/assets/images/avatares/avatare.png';
@@ -12,6 +13,9 @@ import avatare_xmas from '@/assets/images/avatares/avatare-xmas.png';
 import avatare_newyar2021 from '@/assets/images/avatares/avatare-newyear-2021.png';
 import avatare_kid from '@/assets/images/avatares/avatare-kid.png';
 import avatare_daftpunk from '@/assets/images/avatares/avatare-daftpunk.png';
+import avatare_hackerman from '@/assets/images/avatares/avatare-hackerman.png';
+
+import Cyberpunk from '@/shared/components/Cyberpunk';
 
 export const NOIR_SEASON = false;
 export const COVID_SEASON = true;
@@ -45,11 +49,22 @@ export const specialAvatars = {
 
 export const seasonAvatar = [
     {
+        key: 'hackerman',
+        description: 'Happy Hacking :)',
+        yearly: true,
+        year: null,
+        start: '09/10',
+        end: '09/15',
+        url: avatare_hackerman,
+        color: undefined,
+        bgComponent: <Cyberpunk />,
+    },
+    {
         key: 'mex',
         description: 'Festejando las fechas patrias',
         yearly: true,
         year: null,
-        start: '09/01',
+        start: '09/15',
         end: '10/01',
         url: avatare_mex,
         color: '#003020',

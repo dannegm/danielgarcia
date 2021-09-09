@@ -132,52 +132,24 @@ export const Description = styled.div`
 
 export const Link = styled.a.attrs({ target: '_blank' })`
     display: inline-block;
-    color: ${({ color }) => color || '#f0575d'};
     font-weight: 500;
     position: relative;
     text-decoration: none !important;
+    background-color: ${({ color }) => color || '#f0575d'};
+    /* stylelint-disable-next-line declaration-colon-newline-after */
+    color: ${({ color = '#f0575d' }) =>
+        color && isDark(hexToArray(color)) ? '#fff' : '#222'};
+    padding: 0.25rem 0.5rem;
+    margin: 0.15rem inherit;
+    border-radius: 4px;
+    max-height: 2rem;
 
     &:hover,
     &:visited {
-        color: ${({ color }) => color || '#f0575d'};
-    }
-
-    &::after {
-        content: ' ';
-        display: block;
-        width: 0%;
-        border-bottom: 2px solid ${({ color }) => color || '#f0575d'};
-        position: absolute;
-        margin-top: -2px;
-        transition: all 0.2s;
-    }
-
-    &:hover {
-        &::after {
-            width: 100%;
-        }
-    }
-
-    ${breakpoints.mobile(css`
-        background-color: ${({ color }) => color || '#f0575d'};
+        /* stylelint-disable-next-line declaration-colon-newline-after */
         color: ${({ color = '#f0575d' }) =>
             color && isDark(hexToArray(color)) ? '#fff' : '#222'};
-        padding: 0.25rem 0.5rem;
-        margin: 0.15rem inherit;
-        border-radius: 4px;
-        max-height: 2rem;
-
-        &:hover,
-        &:visited {
-            color: ${({ color = '#f0575d' }) =>
-                color && isDark(hexToArray(color)) ? '#fff' : '#222'};
-        }
-
-        &::after {
-            content: '';
-            display: none;
-        }
-    `)}
+    }
 `;
 
 export const SocialLinks = styled.div`
@@ -199,19 +171,4 @@ export const SocialLinks = styled.div`
 
 export const SocialLink = styled(Link)`
     margin-right: 1rem;
-
-    &::before {
-        content: '/';
-        margin-right: 2px;
-        display: inline-block;
-    }
-
-    ${breakpoints.mobile(css`
-        margin-right: 0.5rem;
-
-        &::before {
-            content: '';
-            display: none;
-        }
-    `)}
 `;

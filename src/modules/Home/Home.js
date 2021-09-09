@@ -29,10 +29,12 @@ const $avatar = getTodayAvatar();
 const Home = () => {
     useDocumentTitle('Hello!, I’m Daniel García');
 
+    const todayBackground = $avatar?.bgComponent;
+
     return (
         <Page>
             <Background>
-                <Galaxy backgroundColor={$avatar.color} />
+                {todayBackground || <Galaxy backgroundColor={$avatar.color} />}
             </Background>
             <Overlay backgroundColor={$avatar.color}>
                 <Hero>
