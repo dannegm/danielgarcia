@@ -52,7 +52,7 @@ const Home = () => {
                             <Link href='https://www.wizeline.com/'>
                                 Wizeline
                             </Link>{' '}
-                            coding something awesone.
+                            coding something awesome.
                         </Description>
                         <SocialLinks>
                             <SocialLink
