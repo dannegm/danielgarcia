@@ -132,6 +132,7 @@ export const Description = styled.div`
 
 export const Link = styled.a.attrs({ target: '_blank' })`
     display: inline-block;
+    font-size: 0.8em;
     font-weight: 500;
     position: relative;
     text-decoration: none !important;
@@ -140,6 +141,7 @@ export const Link = styled.a.attrs({ target: '_blank' })`
     color: ${({ color = '#f0575d' }) =>
         color && isDark(hexToArray(color)) ? '#fff' : '#222'};
     padding: 0.25rem 0.5rem;
+    padding-bottom: 0.35rem;
     margin: 0.15rem inherit;
     border-radius: 4px;
     max-height: 2rem;

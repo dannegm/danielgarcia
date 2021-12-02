@@ -15,7 +15,8 @@ import avatare_kid from '@/assets/images/avatares/avatare-kid.png';
 import avatare_daftpunk from '@/assets/images/avatares/avatare-daftpunk.png';
 import avatare_hackerman from '@/assets/images/avatares/avatare-hackerman.png';
 
-import Cyberpunk from '@/shared/components/Cyberpunk';
+import BgCyberpunk from '@/shared/components/BgCyberpunk';
+import BgXmas from '@/shared/components/BgXmas';
 
 export const NOIR_SEASON = false;
 export const COVID_SEASON = true;
@@ -57,7 +58,7 @@ export const seasonAvatar = [
         end: '09/15',
         url: avatare_hackerman,
         color: undefined,
-        bgComponent: <Cyberpunk />,
+        bgComponent: <BgCyberpunk />,
     },
     {
         key: 'mex',
@@ -94,10 +95,11 @@ export const seasonAvatar = [
         description: 'Festejando Navidad',
         yearly: true,
         year: null,
-        start: '12/16',
+        start: '12/1',
         end: '12/30',
         url: avatare_xmas,
         color: '#681b19',
+        bgComponent: <BgXmas />,
     },
     {
         key: 'newyear',
