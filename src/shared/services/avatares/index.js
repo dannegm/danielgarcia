@@ -10,7 +10,7 @@ import avatare_interestepan from '@/assets/images/avatares/avatare-interestepan.
 import avatare_mex from '@/assets/images/avatares/avatare-mex.png';
 import avatare_pumpkin from '@/assets/images/avatares/avatare-pumpkin.png';
 import avatare_xmas from '@/assets/images/avatares/avatare-xmas.png';
-import avatare_newyar2021 from '@/assets/images/avatares/avatare-newyear-2021.png';
+// import avatare_newyar2021 from '@/assets/images/avatares/avatare-newyear-2021.png';
 import avatare_kid from '@/assets/images/avatares/avatare-kid.png';
 import avatare_daftpunk from '@/assets/images/avatares/avatare-daftpunk.png';
 import avatare_hackerman from '@/assets/images/avatares/avatare-hackerman.png';
@@ -107,9 +107,10 @@ export const seasonAvatar = [
         yearly: true,
         year: null,
         start: '12/31',
-        end: '12/03',
-        url: avatare_newyar2021,
-        color: '#4b3580',
+        end: '01/15',
+        url: avatare_xmas,
+        color: '#681b19',
+        bgComponent: <BgXmas />,
     },
     {
         key: 'wisemen',
