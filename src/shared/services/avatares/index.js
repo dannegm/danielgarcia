@@ -106,7 +106,7 @@ export const seasonAvatar = [
         description: 'Festejando Año nuevo',
         yearly: true,
         year: null,
-        start: '12/31',
+        start: '01/01',
         end: '01/15',
         url: avatare_xmas,
         color: '#681b19',
