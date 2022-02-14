@@ -14,6 +14,7 @@ import avatare_xmas from '@/assets/images/avatares/avatare-xmas.png';
 import avatare_kid from '@/assets/images/avatares/avatare-kid.png';
 import avatare_daftpunk from '@/assets/images/avatares/avatare-daftpunk.png';
 import avatare_hackerman from '@/assets/images/avatares/avatare-hackerman.png';
+import avatare_nft from '@/assets/images/avatares/avatare-nft.png';
 
 import BgCyberpunk from '@/shared/components/BgCyberpunk';
 import BgXmas from '@/shared/components/BgXmas';
@@ -129,7 +130,7 @@ export const seasonAvatar = [
         year: null,
         start: '02/01',
         end: '03/01',
-        url: avatare_default,
+        url: avatare_daftpunk,
         color: undefined,
     },
     {
@@ -139,7 +140,7 @@ export const seasonAvatar = [
         year: null,
         start: '03/21',
         end: '03/31',
-        url: avatare_default,
+        url: avatare_daftpunk,
         color: undefined,
     },
     {
@@ -149,7 +150,7 @@ export const seasonAvatar = [
         year: null,
         start: '04/01',
         end: '04/29',
-        url: avatare_default,
+        url: avatare_nft,
         color: undefined,
     },
     {
