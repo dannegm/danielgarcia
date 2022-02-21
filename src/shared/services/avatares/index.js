@@ -15,9 +15,11 @@ import avatare_kid from '@/assets/images/avatares/avatare-kid.png';
 import avatare_daftpunk from '@/assets/images/avatares/avatare-daftpunk.png';
 import avatare_hackerman from '@/assets/images/avatares/avatare-hackerman.png';
 import avatare_nft from '@/assets/images/avatares/avatare-nft.png';
+import avatare_julysix from '@/assets/images/avatares/avatare-julysix.png';
 
 import BgCyberpunk from '@/shared/components/BgCyberpunk';
 import BgXmas from '@/shared/components/BgXmas';
+import BgJulySix from '@/shared/components/BgJulySix';
 
 export const NOIR_SEASON = false;
 export const COVID_SEASON = true;
@@ -60,6 +62,10 @@ export const seasonAvatar = [
         url: avatare_hackerman,
         color: undefined,
         bgComponent: <BgCyberpunk />,
+        nft: {
+            link:
+                'https://mintable.app/COLLECTIBLES/item/Hacker-Dan-Happy-Hacking/PqFI1hftu7aAVLQ',
+        },
     },
     {
         key: 'mex',
@@ -110,7 +116,7 @@ export const seasonAvatar = [
         start: '01/01',
         end: '01/15',
         url: avatare_xmas,
-        color: '#681b19',
+        color: '#3200c4',
         bgComponent: <BgXmas />,
     },
     {
@@ -131,7 +137,11 @@ export const seasonAvatar = [
         start: '02/01',
         end: '03/01',
         url: avatare_daftpunk,
-        color: undefined,
+        color: '#71095b',
+        nft: {
+            link:
+                'https://mintable.app/COLLECTIBLES/item/Naft-Nunk-Good-bye-dear-Daft-Punk/zHSwiHz_QexA1eE',
+        },
     },
     {
         key: 'spring',
@@ -141,7 +151,11 @@ export const seasonAvatar = [
         start: '03/21',
         end: '03/31',
         url: avatare_daftpunk,
-        color: undefined,
+        color: '#66627d',
+        nft: {
+            link:
+                'https://mintable.app/COLLECTIBLES/item/Hacker-Dan-Happy-Hacking/PqFI1hftu7aAVLQ',
+        },
     },
     {
         key: 'fools',
@@ -152,6 +166,10 @@ export const seasonAvatar = [
         end: '04/29',
         url: avatare_nft,
         color: undefined,
+        nft: {
+            link:
+                'https://mintable.app/COLLECTIBLES/item/Nored-Nape-Bored-Ape-into-my-version-/Ykd2ftDawozEtoN',
+        },
     },
     {
         key: 'kid',
@@ -172,6 +190,10 @@ export const seasonAvatar = [
         end: '05/14',
         url: avatare_vader,
         color: '#1f2029',
+        nft: {
+            link:
+                'https://mintable.app/COLLECTIBLES/item/Dan-Vader-May-the-force-be-with-you/N5ZT3AatHGeh7rS',
+        },
     },
     {
         key: 'interestepan',
@@ -182,16 +204,26 @@ export const seasonAvatar = [
         end: '05/16',
         url: avatare_interestepan,
         color: '#3b131f',
+        nft: {
+            link:
+                'https://mintable.app/COLLECTIBLES/item/Interesterpan-Cat-along-the-space/VgfZwdDJKAnLLoS',
+        },
     },
     {
         key: 'julysix',
-        description: 'July Six Pan',
+        description: 'July Six Park',
         yearly: true,
         year: null,
         start: '07/06',
         end: '07/07',
-        url: avatare_default,
+        url: avatare_julysix,
         color: undefined,
+        bgComponent: <BgJulySix />,
+        isSquare: true,
+        nft: {
+            link:
+                'https://mintable.app/collectibles/item/July-Six-Park-Rwarr/FyMpNCbYyALAkMu',
+        },
     },
 ];
 
@@ -216,7 +248,9 @@ export const getAvatarByKey = (key = 'default') => {
         ...seasonAvatar,
     ];
 
-    return avatarCollections.find((avatar) => avatar.key === key);
+    const $avatar = avatarCollections.find((avatar) => avatar.key === key);
+
+    return $avatar || getDefaultAvatar();
 };
 
 export const getTodayAvatar = () => {

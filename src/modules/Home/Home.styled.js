@@ -43,6 +43,7 @@ export const Hero = styled.div`
 `;
 
 export const AvatarContainer = styled.div`
+    position: relative;
     margin: 0;
     padding: 0;
     flex: none;
@@ -68,12 +69,58 @@ export const Avatar = styled.img`
     margin: 0;
     padding: 0;
     width: 100%;
-    border-radius: 50%;
-    border: 4px solid #fff;
+
+    ${({ square }) =>
+        square &&
+        css`
+            border-radius: 1rem;
+            border: 0;
+            margin-left: -1rem;
+        `}
+
+    ${({ square }) =>
+        !square &&
+        css`
+            border-radius: 50%;
+            border: 4px solid #fff;
+        `}
 
     ${breakpoints.mobile(css`
+        margin-left: 0;
         border-radius: 1rem;
         border: 0;
+    `)}
+`;
+
+export const NftBadge = styled.a`
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: block;
+    padding: 0.3rem 0.5rem;
+    color: #fff;
+    background: #7e42ff;
+    border-radius: 3px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover,
+    &:active,
+    &:visited {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    ${breakpoints.desktop(css`
+        bottom: 1.5rem;
+        right: 1.5rem;
+        font-size: 1rem;
     `)}
 `;
 

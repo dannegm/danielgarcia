@@ -12,5 +12,6 @@ module.exports = {
         'selector-type-no-unknown': null,
         'declaration-empty-line-before': null,
         'block-no-empty': null,
+        'selector-list-comma-newline-after': null,
     },
 };

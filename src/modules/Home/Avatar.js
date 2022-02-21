@@ -1,10 +1,11 @@
 /* eslint-disable camelcase */
 import React from 'react';
 
+import { useParams } from 'react-router-dom';
 import useDocumentTitle from '@/shared/hooks/useDocumentTitle';
 
 import Galaxy from '@/shared/components/Galaxy';
-import { getTodayAvatar } from '@/shared/services/avatares';
+import { getAvatarByKey } from '@/shared/services/avatares';
 
 import {
     // Breakline
@@ -25,10 +26,12 @@ import {
     SocialLink,
 } from './Home.styled';
 
-const $avatar = getTodayAvatar();
-
-const Home = () => {
+const AvatarPage = () => {
     useDocumentTitle('Hello!, I’m Daniel García');
+
+    const { avatarKey } = useParams();
+
+    const $avatar = getAvatarByKey(avatarKey);
 
     const todayBackground = $avatar?.bgComponent;
 
@@ -98,4 +101,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default AvatarPage;
