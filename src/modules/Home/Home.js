@@ -46,9 +46,6 @@ const Home = () => {
                             alt={$avatar.description}
                         />
                     </AvatarContainer>
-                    <DescritionContainer>
-                        <Hello>Hello!</Hello>
-                    </DescritionContainer>
                 </Hero>
             </Overlay>
         </Page>
