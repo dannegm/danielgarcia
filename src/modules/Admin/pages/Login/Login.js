@@ -7,13 +7,7 @@ import LoginScreen from './components/LoginScreen';
 import UnauthorizedScreen from './components/UnauthorizedScreen';
 
 const Login = () => {
-    const {
-        isAuthorized,
-        hasSession,
-        user,
-        requestLogin,
-        requestLogout,
-    } = useAuth();
+    const { isAuthorized, hasSession, user, requestLogin, requestLogout } = useAuth();
 
     if (!hasSession) {
         return <LoginScreen requestLogin={requestLogin} />;

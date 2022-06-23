@@ -1,11 +1,14 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Navigate } from 'react-router-dom';
 
-import useAuth from '@/shared/hooks/useAuth';
+// import useAuth from '@hooks/useAuth';
 
 // eslint-disable-next-line react/prop-types
-const PrivateRoute = ({ component: Component, ...rest }) => {
-    const { isLoading, isAuthorized } = useAuth();
+const PrivateRoute = ({ element: Component, ...rest }) => {
+    // const { isLoading, isAuthorized } = useAuth();
+
+    const isLoading = false;
+    const isAuthorized = false;
 
     if (isLoading) {
         return <></>;
@@ -14,12 +17,8 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
     return (
         <Route
             {...rest}
-            render={(props) =>
-                !isAuthorized ? (
-                    <Redirect to='/secret/login' />
-                ) : (
-                    <Component {...props} />
-                )
+            element={(props) =>
+                !isAuthorized ? <Navigate replace to='/secret/login' /> : <Component {...props} />
             }
         />
     );

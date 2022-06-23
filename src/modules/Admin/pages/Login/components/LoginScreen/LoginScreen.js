@@ -3,14 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Button, Icon } from '@blueprintjs/core';
 
-import {
-    PageWrapper,
-    IconWrapper,
-    Title,
-    Description,
-    Red,
-    Purple,
-} from './LoginScreen.styled';
+import { PageWrapper, IconWrapper, Title, Description, Red, Purple } from './LoginScreen.styled';
 
 const LoginScreen = ({ requestLogin }) => {
     return (

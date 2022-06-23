@@ -3,14 +3,7 @@ module.exports = {
         browser: true,
         es2020: true,
     },
-    extends: [
-        'airbnb',
-        'plugin:react/recommended',
-        'plugin:prettier/recommended',
-    ],
-    globals: {
-        config: 'readonly',
-    },
+    extends: ['airbnb', 'plugin:react/recommended', 'plugin:prettier/recommended'],
     parserOptions: {
         ecmaFeatures: {
             jsx: true,
@@ -35,8 +28,22 @@ module.exports = {
     },
     settings: {
         'import/resolver': {
-            node: {},
-            webpack: {},
+            alias: {
+                map: [
+                    ['@modules', './src/modules'],
+                    ['@shared', './src/shared'],
+                    ['@assets', './src/assets'],
+
+                    ['@components', './src/shared/components'],
+                    ['@helpers', './src/shared/helpers'],
+                    ['@hooks', './src/shared/hooks'],
+                    ['@services', './src/shared/services'],
+                    ['@styles', './src/shared/styles'],
+
+                    ['@', './src'],
+                ],
+                extensions: ['.ts', '.js', '.jsx', '.json'],
+            },
         },
     },
 };

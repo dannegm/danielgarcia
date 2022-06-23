@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 
-const Home = lazy(() => import(/* webpackChunkName: "home" */ './Home'));
-const Avatar = lazy(() => import(/* webpackChunkName: "Avatar" */ './Avatar'));
+const Home = lazy(() => import('./Home'));
+const Avatar = lazy(() => import('./Avatar'));
 
 const exact = true;
 
@@ -9,13 +9,13 @@ const routes = [
     {
         name: 'home',
         path: '/',
-        component: Home,
+        Element: Home,
         exact,
     },
     {
         name: 'avatar',
         path: '/avatar/:avatarKey',
-        component: Avatar,
+        Element: Avatar,
         exact,
     },
 ];

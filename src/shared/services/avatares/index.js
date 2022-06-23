@@ -2,24 +2,24 @@
 import React from 'react';
 import moment from 'moment';
 
-import avatare_default from '@/assets/images/avatares/avatare.png';
-import avatare_noir from '@/assets/images/avatares/avatare-noir.png';
-import avatare_covid19 from '@/assets/images/avatares/avatare-covid19.png';
-import avatare_vader from '@/assets/images/avatares/avatare-vader.png';
-import avatare_interestepan from '@/assets/images/avatares/avatare-interestepan.png';
-import avatare_mex from '@/assets/images/avatares/avatare-mex.png';
-import avatare_pumpkin from '@/assets/images/avatares/avatare-pumpkin.png';
-import avatare_xmas from '@/assets/images/avatares/avatare-xmas.png';
-// import avatare_newyar2021 from '@/assets/images/avatares/avatare-newyear-2021.png';
-import avatare_kid from '@/assets/images/avatares/avatare-kid.png';
-import avatare_daftpunk from '@/assets/images/avatares/avatare-daftpunk.png';
-import avatare_hackerman from '@/assets/images/avatares/avatare-hackerman.png';
-import avatare_nft from '@/assets/images/avatares/avatare-nft.png';
-import avatare_julysix from '@/assets/images/avatares/avatare-julysix.png';
+import avatare_default from '@assets/images/avatares/avatare.png';
+import avatare_noir from '@assets/images/avatares/avatare-noir.png';
+import avatare_covid19 from '@assets/images/avatares/avatare-covid19.png';
+import avatare_vader from '@assets/images/avatares/avatare-vader.png';
+import avatare_interestepan from '@assets/images/avatares/avatare-interestepan.png';
+import avatare_mex from '@assets/images/avatares/avatare-mex.png';
+import avatare_pumpkin from '@assets/images/avatares/avatare-pumpkin.png';
+import avatare_xmas from '@assets/images/avatares/avatare-xmas.png';
+// import avatare_newyar2021 from '@assets/images/avatares/avatare-newyear-2021.png';
+import avatare_kid from '@assets/images/avatares/avatare-kid.png';
+import avatare_daftpunk from '@assets/images/avatares/avatare-daftpunk.png';
+import avatare_hackerman from '@assets/images/avatares/avatare-hackerman.png';
+import avatare_nft from '@assets/images/avatares/avatare-nft.png';
+import avatare_julysix from '@assets/images/avatares/avatare-julysix.png';
 
-import BgCyberpunk from '@/shared/components/BgCyberpunk';
-import BgXmas from '@/shared/components/BgXmas';
-import BgJulySix from '@/shared/components/BgJulySix';
+import BgCyberpunk from '@components/BgCyberpunk';
+import BgXmas from '@components/BgXmas';
+import BgJulySix from '@components/BgJulySix';
 
 export const NOIR_SEASON = false;
 export const COVID_SEASON = true;
@@ -63,8 +63,7 @@ export const seasonAvatar = [
         color: undefined,
         bgComponent: <BgCyberpunk />,
         nft: {
-            link:
-                'https://mintable.app/COLLECTIBLES/item/Hacker-Dan-Happy-Hacking/PqFI1hftu7aAVLQ',
+            link: 'https://mintable.app/COLLECTIBLES/item/Hacker-Dan-Happy-Hacking/PqFI1hftu7aAVLQ',
         },
     },
     {
@@ -139,8 +138,7 @@ export const seasonAvatar = [
         url: avatare_daftpunk,
         color: '#71095b',
         nft: {
-            link:
-                'https://mintable.app/COLLECTIBLES/item/Naft-Nunk-Good-bye-dear-Daft-Punk/zHSwiHz_QexA1eE',
+            link: 'https://mintable.app/COLLECTIBLES/item/Naft-Nunk-Good-bye-dear-Daft-Punk/zHSwiHz_QexA1eE',
         },
     },
     {
@@ -153,8 +151,7 @@ export const seasonAvatar = [
         url: avatare_daftpunk,
         color: '#66627d',
         nft: {
-            link:
-                'https://mintable.app/COLLECTIBLES/item/Hacker-Dan-Happy-Hacking/PqFI1hftu7aAVLQ',
+            link: 'https://mintable.app/COLLECTIBLES/item/Hacker-Dan-Happy-Hacking/PqFI1hftu7aAVLQ',
         },
     },
     {
@@ -167,8 +164,7 @@ export const seasonAvatar = [
         url: avatare_nft,
         color: undefined,
         nft: {
-            link:
-                'https://mintable.app/COLLECTIBLES/item/Nored-Nape-Bored-Ape-into-my-version-/Ykd2ftDawozEtoN',
+            link: 'https://mintable.app/COLLECTIBLES/item/Nored-Nape-Bored-Ape-into-my-version-/Ykd2ftDawozEtoN',
         },
     },
     {
@@ -191,8 +187,7 @@ export const seasonAvatar = [
         url: avatare_vader,
         color: '#1f2029',
         nft: {
-            link:
-                'https://mintable.app/COLLECTIBLES/item/Dan-Vader-May-the-force-be-with-you/N5ZT3AatHGeh7rS',
+            link: 'https://mintable.app/COLLECTIBLES/item/Dan-Vader-May-the-force-be-with-you/N5ZT3AatHGeh7rS',
         },
     },
     {
@@ -205,8 +200,7 @@ export const seasonAvatar = [
         url: avatare_interestepan,
         color: '#3b131f',
         nft: {
-            link:
-                'https://mintable.app/COLLECTIBLES/item/Interesterpan-Cat-along-the-space/VgfZwdDJKAnLLoS',
+            link: 'https://mintable.app/COLLECTIBLES/item/Interesterpan-Cat-along-the-space/VgfZwdDJKAnLLoS',
         },
     },
     {
@@ -221,8 +215,7 @@ export const seasonAvatar = [
         bgComponent: <BgJulySix />,
         isSquare: true,
         nft: {
-            link:
-                'https://mintable.app/collectibles/item/July-Six-Park-Rwarr/FyMpNCbYyALAkMu',
+            link: 'https://mintable.app/collectibles/item/July-Six-Park-Rwarr/FyMpNCbYyALAkMu',
         },
     },
 ];

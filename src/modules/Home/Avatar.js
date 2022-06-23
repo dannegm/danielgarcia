@@ -1,11 +1,10 @@
 /* eslint-disable camelcase */
 import React from 'react';
-
 import { useParams } from 'react-router-dom';
-import useDocumentTitle from '@/shared/hooks/useDocumentTitle';
 
-import Galaxy from '@/shared/components/Galaxy';
-import { getAvatarByKey } from '@/shared/services/avatares';
+import useDocumentTitle from '@hooks/useDocumentTitle';
+import Galaxy from '@components/Galaxy';
+import { getAvatarByKey } from '@services/avatares';
 
 import {
     // Breakline
@@ -37,9 +36,7 @@ const AvatarPage = () => {
 
     return (
         <Page>
-            <Background>
-                {todayBackground || <Galaxy backgroundColor={$avatar.color} />}
-            </Background>
+            <Background>{todayBackground || <Galaxy backgroundColor={$avatar.color} />}</Background>
             <Overlay backgroundColor={$avatar.color}>
                 <Hero>
                     <AvatarContainer>
@@ -63,34 +60,20 @@ const AvatarPage = () => {
                         <Title>Software Specialist.</Title>
                         <Description>
                             Currently may find me at{' '}
-                            <Link href='https://www.wizeline.com/'>
-                                Wizeline
-                            </Link>{' '}
-                            coding something awesome.
+                            <Link href='https://www.wizeline.com/'>Wizeline</Link> coding something
+                            awesome.
                         </Description>
                         <SocialLinks>
-                            <SocialLink
-                                color='#d1d5da'
-                                href='https://github.com/dannegm'
-                            >
+                            <SocialLink color='#d1d5da' href='https://github.com/dannegm'>
                                 Github
                             </SocialLink>
-                            <SocialLink
-                                color='#1da1f2'
-                                href='https://twitter.com/dannegm'
-                            >
+                            <SocialLink color='#1da1f2' href='https://twitter.com/dannegm'>
                                 Twitter
                             </SocialLink>
-                            <SocialLink
-                                color='#0a66c2'
-                                href='https://www.linkedin.com/in/dannegm'
-                            >
+                            <SocialLink color='#0a66c2' href='https://www.linkedin.com/in/dannegm'>
                                 LinkedIn
                             </SocialLink>
-                            <SocialLink
-                                color='#dd2a7b'
-                                href='https://www.instagram.com/dannegm'
-                            >
+                            <SocialLink color='#dd2a7b' href='https://www.instagram.com/dannegm'>
                                 Instagram
                             </SocialLink>
                         </SocialLinks>

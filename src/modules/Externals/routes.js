@@ -1,15 +1,17 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+
+import links from './links';
 
 const exact = true;
 
-const routes = [
-    {
-        name: 'external.nyungerland',
-        path: '/nyungerland',
-        component: () => <Redirect to='https://nyungerland.net/' />,
-        exact,
-    },
-];
+const mapLinkToRedirect = (link) => ({
+    name: `external.${link.name}`,
+    path: link.path,
+    Element: () => <Navigate replace to={link.url} />,
+    exact,
+});
+
+const routes = links.map(mapLinkToRedirect);
 
 export default routes;

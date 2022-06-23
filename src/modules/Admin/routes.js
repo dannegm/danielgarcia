@@ -1,19 +1,11 @@
 import React, { lazy } from 'react';
 import { Redirect } from 'react-router-dom';
 
-const Login = lazy(() =>
-    import(/* webpackChunkName: "admin.login" */ './pages/Login')
-);
-const Logout = lazy(() =>
-    import(/* webpackChunkName: "admin.logout" */ './pages/Logout')
-);
+const Login = lazy(() => import(/* webpackChunkName: "admin.login" */ './pages/Login'));
+const Logout = lazy(() => import(/* webpackChunkName: "admin.logout" */ './pages/Logout'));
 
-const Avatars = lazy(() =>
-    import(/* webpackChunkName: "admin.avatars" */ './pages/Avatars')
-);
-const Users = lazy(() =>
-    import(/* webpackChunkName: "admin.users" */ './pages/Users')
-);
+const Avatars = lazy(() => import(/* webpackChunkName: "admin.avatars" */ './pages/Avatars'));
+const Users = lazy(() => import(/* webpackChunkName: "admin.users" */ './pages/Users'));
 
 const exact = true;
 const auth = true;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import RouteHandler from './state/route/RouteHandler';
+import RouterHandler from './state/route/RouterHandler';
 import GlobalStyle from './shared/styles/GlobalStyle';
 
 const Providers = ({ children }) => {
@@ -19,7 +19,7 @@ Providers.propTypes = {
 const App = () => {
     return (
         <Providers>
-            <RouteHandler />
+            <RouterHandler />
         </Providers>
     );
 };

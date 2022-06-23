@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import nightcity from '@/assets/images/backgrounds/nightcity.jpg';
+import nightcity from '@assets/images/backgrounds/nightcity.jpg';
 
 export const Background = styled.div`
     width: 100%;

@@ -23,8 +23,7 @@ const UnauthorizedScreen = ({ user, requestLogin, requestLogout }) => {
             <Description>
                 No tienes permisos para acceder al <Purple>dashboard</Purple>,
                 <br />
-                proporciona el siguiente código a tu administrador para obtener
-                acceso.
+                proporciona el siguiente código a tu administrador para obtener acceso.
             </Description>
             <Code>{user.uid}</Code>
             <Button large intent='danger' onClick={() => requestLogin()}>

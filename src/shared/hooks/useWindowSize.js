@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const useWindowSize = (callback) => {
-    const [windowSize, setWindowSize] = useState([
-        window.innerWidth,
-        window.innerHeight,
-    ]);
+    const [windowSize, setWindowSize] = useState([window.innerWidth, window.innerHeight]);
 
     const onResize = () => {
         setWindowSize([window.innerWidth, window.innerHeight]);

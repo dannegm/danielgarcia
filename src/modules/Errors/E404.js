@@ -1,6 +1,6 @@
 import React from 'react';
 
-import useDocumentTitle from '@/shared/hooks/useDocumentTitle';
+import useDocumentTitle from '@hooks/useDocumentTitle';
 
 import { Page } from './E404.styled';
 

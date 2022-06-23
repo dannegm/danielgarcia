@@ -1,4 +1,4 @@
-import { Routes } from '@/modules';
+import { Routes } from '@modules';
 
 const routes = [
     // breakline

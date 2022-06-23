@@ -2,7 +2,17 @@
     "compilerOptions": {
         "baseUrl": "./",
         "paths": {
-            "@/*": ["src/*"]
+            "@modules/*": ["./src/modules/*"],
+            "@shared/*": ["./src/shared/*"],
+            "@assets/*": ["./src/assets/*"],
+
+            "@components/*": ["./src/shared/components/*"],
+            "@helpers/*": ["./src/shared/helpers/*"],
+            "@hooks/*": ["./src/shared/hooks/*"],
+            "@services/*": ["./src/shared/services/*"],
+            "@styles/*": ["./src/shared/styles/*"],
+
+            "@/*": ["./src/*"]
         }
     },
     "exclude": ["node_modules", "public", "build"]

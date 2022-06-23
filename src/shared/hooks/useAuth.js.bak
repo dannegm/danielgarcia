@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
-import { firebase, auth, db } from '@/shared/services/firebase';
+import { firebase, auth, db } from '@services/firebase';
 
 const GoogleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
@@ -20,10 +20,7 @@ const useAuth = () => {
     auth.onAuthStateChanged(async (authUser) => {
         if (authUser) {
             setUser(authUser);
-            const usersSnapshot = await db
-                .collection('users')
-                .doc(authUser.uid)
-                .get();
+            const usersSnapshot = await db.collection('users').doc(authUser.uid).get();
             setSession(true);
             setAuthorized(usersSnapshot.exists);
             setLoading(false);

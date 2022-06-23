@@ -2,8 +2,8 @@ import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import * as THREE from 'three';
 
-import useWindowSize from '@/shared/hooks/useWindowSize';
-import useAnimationFrame from '@/shared/hooks/useAnimationFrame';
+import useWindowSize from '@hooks/useWindowSize';
+import useAnimationFrame from '@hooks/useAnimationFrame';
 
 import { Wrapper, Canvas } from './Galaxy.styled';
 

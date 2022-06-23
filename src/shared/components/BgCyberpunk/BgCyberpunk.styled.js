@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import cyberpunk from '@/assets/images/backgrounds/cyberpunk.gif';
+import cyberpunk from '@assets/images/backgrounds/cyberpunk.gif';
 
 export const Background = styled.div`
     width: 100%;

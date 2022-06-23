@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
 import { rgba } from 'polished';
-import { breakpoints } from '@/shared/styles/mediaQueries';
-import { isDark, hexToArray } from '@/shared/helpers/colors';
+
+import { breakpoints } from '@styles/mediaQueries';
+import { isDark, hexToArray } from '@helpers/colors';
 
 export const Page = styled.div`
     display: block;
@@ -23,8 +24,7 @@ export const Overlay = styled.div`
     min-height: 100vh;
     backdrop-filter: blur(2px);
     /* stylelint-disable-next-line declaration-colon-newline-after */
-    background-color: ${({ backgroundColor = '#022D4B' }) =>
-        rgba(backgroundColor, 0.5)};
+    background-color: ${({ backgroundColor = '#022D4B' }) => rgba(backgroundColor, 0.5)};
 `;
 
 export const Hero = styled.div`
@@ -50,7 +50,6 @@ export const AvatarContainer = styled.div`
     width: 320px;
     padding-right: 2rem;
     margin-right: 2rem;
-    border-right: 4px solid #fff;
 
     ${breakpoints.desktop(css`
         width: 200px;
@@ -67,28 +66,14 @@ export const AvatarContainer = styled.div`
 
 export const Avatar = styled.img`
     margin: 0;
+    margin-left: -1rem;
     padding: 0;
     width: 100%;
-
-    ${({ square }) =>
-        square &&
-        css`
-            border-radius: 1rem;
-            border: 0;
-            margin-left: -1rem;
-        `}
-
-    ${({ square }) =>
-        !square &&
-        css`
-            border-radius: 50%;
-            border: 4px solid #fff;
-        `}
+    border-radius: 1rem;
+    border: 0;
 
     ${breakpoints.mobile(css`
         margin-left: 0;
-        border-radius: 1rem;
-        border: 0;
     `)}
 `;
 
@@ -184,9 +169,7 @@ export const Link = styled.a.attrs({ target: '_blank' })`
     position: relative;
     text-decoration: none !important;
     background-color: ${({ color }) => color || '#f0575d'};
-    /* stylelint-disable-next-line declaration-colon-newline-after */
-    color: ${({ color = '#f0575d' }) =>
-        color && isDark(hexToArray(color)) ? '#fff' : '#222'};
+    color: ${({ color = '#f0575d' }) => (color && isDark(hexToArray(color)) ? '#fff' : '#222')};
     padding: 0.25rem 0.5rem;
     padding-bottom: 0.35rem;
     margin: 0.15rem inherit;
@@ -195,9 +178,7 @@ export const Link = styled.a.attrs({ target: '_blank' })`
 
     &:hover,
     &:visited {
-        /* stylelint-disable-next-line declaration-colon-newline-after */
-        color: ${({ color = '#f0575d' }) =>
-            color && isDark(hexToArray(color)) ? '#fff' : '#222'};
+        color: ${({ color = '#f0575d' }) => (color && isDark(hexToArray(color)) ? '#fff' : '#222')};
     }
 `;
 
