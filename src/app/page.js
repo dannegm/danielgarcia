@@ -54,7 +54,10 @@ const Home = () => {
             </Section>
 
             <Section className='flex flex-row gap-2 justify-between items-center'>
-                <h2 className='text-sm font-bold'>Keep in touch</h2>
+                <h2 className='text-sm font-bold'>
+                    <span className='hidden sm:block'>Keep in touch</span>
+                    <span className='block sm:hidden'>Socials</span>
+                </h2>
                 <nav className='flex flex-row gap-2 text-xs *:hover:underline'>
                     <a target='_blank' href='https://github.com/dannegm'>
                         Github
