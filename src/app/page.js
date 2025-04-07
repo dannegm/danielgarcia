@@ -1,103 +1,77 @@
-import Image from "next/image";
+import { cn } from '@/modules/core/helpers/utils';
+import { Section } from '@/modules/main/components/section';
+import { Button } from '@/modules/shadcn/ui/button';
+import { BookOpenText, Guitar, Hand, Joystick, Piano, Popcorn } from 'lucide-react';
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+const Home = () => {
+    return (
+        <main>
+            <Section className='flex flex-col pt-16 md:pt-32'>
+                <img className='size-32 rounded-2xl shadow mb-8' src='/avatare' />
+                <p className='text-sm flex flex-row gap-2 items-center'>
+                    <Hand className='size-4 -scale-x-100 -rotate-45' />
+                    Hello!, I&apos;m
+                </p>
+                <h1 className='text-4xl tracking-tight -ml-0.5'>Daniel García</h1>
+                <h2 className='text-base'>
+                    Software Engineer
+                    <span className='hidden sm:inline text-gray-500 dark:text-neutral-300'>
+                        <span className='mx-1'>/</span>Frontend Heavy
+                    </span>
+                </h2>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
-}
+                <p className='mt-4 text-sm text-pretty text-gray-700 dark:text-neutral-400'>
+                    I&apos;m a self-taught developer with 12 years of experience in software
+                    development. I specialize in web solutions and am continuously growing towards
+                    software architecture.
+                </p>
+                <p
+                    className={cn(
+                        'mt-2 text-sm text-pretty text-gray-700 dark:text-neutral-400',
+                        '[&_svg]:inline-flex [&_svg]:size-4 [&_svg]:-mt-1 [&_svg]:-ml-1',
+                    )}
+                >
+                    Outside of work, I enjoy working on personal projects, including video game
+                    development <Joystick />. I also play guitar <Guitar /> and piano <Piano />,
+                    love reading <BookOpenText />, and enjoy going to the movies <Popcorn />.
+                </p>
+            </Section>
+
+            <Section className='flex flex-row gap-2 justify-between items-center'>
+                <h2 className='text-sm font-bold'>Resume</h2>
+                <nav className='flex flex-row gap-2'>
+                    <Button size='sm' variant='secondary' asChild>
+                        <a href='/docs/resume.pdf' download>
+                            Download
+                        </a>
+                    </Button>
+                    <Button size='sm' variant='secondary' asChild>
+                        <a href='/docs/resume-ats.pdf' download>
+                            ATS Friendly
+                        </a>
+                    </Button>
+                </nav>
+            </Section>
+
+            <Section className='flex flex-row gap-2 justify-between items-center'>
+                <h2 className='text-sm font-bold'>Keep in touch</h2>
+                <nav className='flex flex-row gap-2 text-xs *:hover:underline'>
+                    <a target='_blank' href='https://github.com/dannegm'>
+                        Github
+                    </a>
+                    <a target='_blank' href='https://www.linkedin.com/in/dannegm'>
+                        LinkedIn
+                    </a>
+                    <a target='_blank' href='https://twitter.com/dannegm'>
+                        Twitter
+                    </a>
+                    <a target='_blank' href='https://www.instagram.com/dannegm'>
+                        Instagram
+                    </a>
+                </nav>
+            </Section>
+        </main>
+    );
+};
+
+export default Home;
