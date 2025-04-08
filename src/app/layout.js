@@ -23,7 +23,10 @@ const Layout = ({ children }) => {
                     />
 
                     <div className='relative bg-background'>
-                        <Section className='flex flex-row items-center justify-between'>
+                        <Section
+                            className='flex flex-row items-center justify-between'
+                            classNames={{ wrapper: 'sticky top-0 z-1 bg-background' }}
+                        >
                             <Link className='flex flex-row items-center gap-2' href='/'>
                                 <img
                                     className='size-4 dark:invert'
