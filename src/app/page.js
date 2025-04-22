@@ -1,3 +1,4 @@
+import { TrackClick } from '@/modules/core/components/track-click';
 import { cn } from '@/modules/core/helpers/utils';
 import { Section } from '@/modules/main/components/section';
 import { Button } from '@/modules/shadcn/ui/button';
@@ -47,16 +48,20 @@ const Home = () => {
             <Section className='flex flex-row gap-2 justify-between items-center'>
                 <h2 className='text-sm font-bold'>Resume</h2>
                 <nav className='flex flex-row gap-2'>
-                    <Button size='sm' variant='secondary' asChild>
-                        <a href='/docs/resume.pdf' download>
-                            Download
-                        </a>
-                    </Button>
-                    <Button size='sm' variant='secondary' asChild>
-                        <a href='/docs/resume-ats.pdf' download>
-                            ATS Friendly
-                        </a>
-                    </Button>
+                    <TrackClick name='download-resume' data={{ type: 'normal' }}>
+                        <Button size='sm' variant='secondary' asChild>
+                            <a href='/docs/resume.pdf' download>
+                                Download
+                            </a>
+                        </Button>
+                    </TrackClick>
+                    <TrackClick name='download-resume' data={{ type: 'ats' }}>
+                        <Button size='sm' variant='secondary' asChild>
+                            <a href='/docs/resume-ats.pdf' download>
+                                ATS Friendly
+                            </a>
+                        </Button>
+                    </TrackClick>
                 </nav>
             </Section>
 
@@ -160,18 +165,26 @@ const Home = () => {
                     <span className='block sm:hidden'>Socials</span>
                 </h2>
                 <nav className='flex flex-row gap-2 text-xs *:hover:underline'>
-                    <a target='_blank' href='https://github.com/dannegm'>
-                        Github
-                    </a>
-                    <a target='_blank' href='https://www.linkedin.com/in/dannegm'>
-                        LinkedIn
-                    </a>
-                    <a target='_blank' href='https://twitter.com/dannegm'>
-                        Twitter
-                    </a>
-                    <a target='_blank' href='https://www.instagram.com/dannegm'>
-                        Instagram
-                    </a>
+                    <TrackClick name='social' data={{ type: 'github' }}>
+                        <a target='_blank' href='https://github.com/dannegm'>
+                            Github
+                        </a>
+                    </TrackClick>
+                    <TrackClick name='social' data={{ type: 'linkedin' }}>
+                        <a target='_blank' href='https://www.linkedin.com/in/dannegm'>
+                            LinkedIn
+                        </a>
+                    </TrackClick>
+                    <TrackClick name='social' data={{ type: 'twitter' }}>
+                        <a target='_blank' href='https://twitter.com/dannegm'>
+                            Twitter
+                        </a>
+                    </TrackClick>
+                    <TrackClick name='social' data={{ type: 'instagram' }}>
+                        <a target='_blank' href='https://www.instagram.com/dannegm'>
+                            Instagram
+                        </a>
+                    </TrackClick>
                 </nav>
             </Section>
         </main>

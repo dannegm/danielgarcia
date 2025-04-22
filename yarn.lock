@@ -536,6 +536,11 @@
   dependencies:
     "@tanstack/query-core" "5.71.10"
 
+"@umami/node@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@umami/node/-/node-0.4.0.tgz#bbed7c5fed3ffb1863afbbdac29a03bdf024951f"
+  integrity sha512-pyphprbiF7KiDSc+SWZ4/rVM8B5vU27zIiFfEPj2lEqczpI4xAKSp+dM3tlzyRAWJL32fcbCfAaLGhJZQV13Rg==
+
 busboy@1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/busboy/-/busboy-1.6.0.tgz#966ea36a9502e43cdb9146962523b92f531f6893"
