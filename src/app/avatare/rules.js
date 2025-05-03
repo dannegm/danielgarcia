@@ -10,7 +10,7 @@ import {
 
 export const isNight = (now = new Date()) => {
     const startTime = setSeconds(setMinutes(setHours(new Date(), 20), 0), 0); // 8:00 PM
-    const endTime = setSeconds(setMinutes(setHours(new Date(), 6), 0), 0); // 2:00 AM (del día siguiente)
+    const endTime = setSeconds(setMinutes(setHours(new Date(), 6), 0), 0); // 6:00 AM (del día siguiente)
 
     const adjustedEndTime = endTime < startTime ? addDays(endTime, 1) : endTime; // Ajusta si cruza la medianoche
 
