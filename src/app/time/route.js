@@ -10,7 +10,7 @@ export async function GET(request) {
         const geoRes = await fetch(`https://ipapi.co/${ip}/timezone`);
         timezone = await geoRes.text();
         if (timezone.includes('/')) {
-            client = new Date().toLocaleString({ timeZone: 'America/Mexico_City' });
+            client = new Date().toLocaleString('en-US', { timeZone });
         }
     } catch {}
 
