@@ -1,5 +1,6 @@
 import { TrackClick } from '@/modules/core/components/track-click';
 import { cn } from '@/modules/core/helpers/utils';
+import Logo from '@/modules/main/components/logo';
 import { Section } from '@/modules/main/components/section';
 import { Button } from '@/modules/shadcn/ui/button';
 import { BookOpenText, Guitar, Hand, Joystick, Piano, Popcorn } from 'lucide-react';
@@ -19,7 +20,9 @@ const Home = () => {
                     <Hand className='size-4 -scale-x-100 -rotate-45' />
                     Hello!, I&apos;m
                 </p>
-                <h1 className='text-4xl tracking-tight -ml-0.5'>Daniel García</h1>
+
+                <Logo className='-ml-0.5'>Daniel García</Logo>
+
                 <h2 className='text-base'>
                     Software Engineer
                     <span className='hidden sm:inline text-gray-500 dark:text-neutral-300'>
