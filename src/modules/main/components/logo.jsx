@@ -9,7 +9,7 @@ export default function Logo({ className, children }) {
             className={cn(
                 oswald.className,
                 'text-5xl sm:text-6xl tracking-tight text-transparent',
-                'bg-[#303050] bg-size-[400px] bg-position-[60%_80%] sm:bg-position-[-15%_80%] bg-blend-overlay bg-clip-text',
+                'bg-[#303050] bg-size-[400px] bg-position-[70%_80%] sm:bg-position-[-15%_80%] bg-blend-overlay bg-clip-text',
                 'dark:bg-[#ebebfa26]',
                 className,
             )}
