@@ -6,6 +6,8 @@ import { Section } from '@/modules/main/components/section';
 import { Button } from '@/modules/shadcn/ui/button';
 import { BookOpenText, Guitar, Hand, Joystick, Piano, Popcorn } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 const getGreetings = () => {
     const greetings = [
         'Brand bew site!',
