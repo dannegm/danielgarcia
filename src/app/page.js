@@ -1,21 +1,47 @@
 import { TrackClick } from '@/modules/core/components/track-click';
+import { randomPick } from '@/modules/core/helpers/arrays';
 import { cn } from '@/modules/core/helpers/utils';
 import Logo from '@/modules/main/components/logo';
 import { Section } from '@/modules/main/components/section';
 import { Button } from '@/modules/shadcn/ui/button';
 import { BookOpenText, Guitar, Hand, Joystick, Piano, Popcorn } from 'lucide-react';
 
+const getGreetings = () => {
+    const greetings = [
+        'Brand bew site!',
+        'May the force be with you!',
+        'Hello world!',
+        'Greetings, Earthling!',
+        'Salutations!',
+        'Howdy, partner!',
+        'Ahoy, matey!',
+        'Bonjour, mon ami!',
+        'Ciao, bella!',
+        'Konnichiwa!',
+        'Namaste!',
+        'Salve, amice!',
+        'Shalom!',
+        'Aloha!',
+        'Guten Tag!',
+        'Bonjour, tout le monde!',
+        'Salut, tout le monde!',
+    ];
+    return randomPick(greetings);
+};
+
 const Home = () => {
+    const greetings = getGreetings();
     return (
         <main>
             <Section className='flex flex-col pt-16 md:pt-32'>
                 <div className='flex flex-row gap-4 items-end mb-8'>
-                    <img className='size-32 rounded-2xl shadow' src='/avatare' />
-                    <div className='relative max-w-3/5 p-4 bg-gray-100 dark:bg-gray-800 mb-6'>
-                        <span className='absolute left-0 -bottom-[20px] block w-0 h-0 border-solid border-t-[20px] border-r-[20px] border-l-0 border-b-0 border-l-transparent border-r-transparent border-t-gray-100 dark:border-t-gray-800 border-b-transparent' />
-                        Brand new site!.
+                    <img className='size-24 sm:size-32 rounded-2xl shadow' src='/avatare' />
+                    <div className='relative max-w-3/5 px-3 py-2 sm:p-4 bg-gray-100 dark:bg-gray-800 mb-4 sm:mb-6'>
+                        <span className='absolute left-0 -bottom-[10px] sm:-bottom-[20px] block w-0 h-0 border-solid border-t-[10px] border-r-[10px] sm:border-t-[20px] sm:border-r-[20px] border-l-0 border-b-0 border-l-transparent border-r-transparent border-t-gray-100 dark:border-t-gray-800 border-b-transparent' />
+                        <span className='text-sm sm:text-base'>{greetings}</span>
                     </div>
                 </div>
+
                 <p className='text-sm flex flex-row gap-2 items-center'>
                     <Hand className='size-4 -scale-x-100 -rotate-45' />
                     Hello!, I&apos;m
