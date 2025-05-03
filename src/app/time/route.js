@@ -13,5 +13,5 @@ export async function GET(request) {
         }
     } catch {}
 
-    return Response.json({ server, client });
+    return Response.json({ server, client, timezone });
 }
