@@ -10,23 +10,10 @@ export const dynamic = 'force-dynamic';
 
 const getGreetings = () => {
     const greetings = [
+        // ...
         'Brand bew site!',
         'May the force be with you!',
         'Hello world!',
-        'Greetings, Earthling!',
-        'Salutations!',
-        'Howdy, partner!',
-        'Ahoy, matey!',
-        'Bonjour, mon ami!',
-        'Ciao, bella!',
-        'Konnichiwa!',
-        'Namaste!',
-        'Salve, amice!',
-        'Shalom!',
-        'Aloha!',
-        'Guten Tag!',
-        'Bonjour, tout le monde!',
-        'Salut, tout le monde!',
     ];
     return randomPick(greetings);
 };
