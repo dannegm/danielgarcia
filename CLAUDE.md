@@ -9,10 +9,10 @@ Daniel García's personal portfolio site — a single-page Next.js (App Router) 
 ## Commands
 
 ```bash
-yarn dev      # start dev server (next dev --turbopack)
-yarn build    # production build
-yarn start    # serve production build
-yarn lint     # next lint
+pnpm dev      # start dev server (next dev --turbopack)
+pnpm build    # production build
+pnpm start    # serve production build
+pnpm lint     # next lint
 ```
 
 There is no test suite in this repo.
